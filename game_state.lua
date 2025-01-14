@@ -1,13 +1,13 @@
 -- Initialize fonts immediately when the module loads
 local fonts = {
-    title = love.graphics.newFont(64),  -- Increased for more impact
-    large = love.graphics.newFont(36),  -- Increased for better visibility
-    medium = love.graphics.newFont(28), -- Adjusted for balance
-    small = love.graphics.newFont(20),
-    combo = love.graphics.newFont(48),  -- Increased for dramatic effect
-    multiplier = love.graphics.newFont(32),
-    neon = love.graphics.newFont(42),   -- New font for neon effects
-    header = love.graphics.newFont(52)  -- New font for section headers
+    title = love.graphics.newFont("assets/Noto_Sans_JP/static/NotoSansJP-Regular.ttf", 64),
+    large = love.graphics.newFont("assets/Noto_Sans_JP/static/NotoSansJP-Regular.ttf", 36),
+    medium = love.graphics.newFont("assets/Noto_Sans_JP/static/NotoSansJP-Regular.ttf", 28),
+    small = love.graphics.newFont("assets/Noto_Sans_JP/static/NotoSansJP-Regular.ttf", 20),
+    combo = love.graphics.newFont("assets/Noto_Sans_JP/static/NotoSansJP-Regular.ttf", 48),
+    multiplier = love.graphics.newFont("assets/Noto_Sans_JP/static/NotoSansJP-Regular.ttf", 32),
+    neon = love.graphics.newFont("assets/Noto_Sans_JP/static/NotoSansJP-Regular.ttf", 42),
+    header = love.graphics.newFont("assets/Noto_Sans_JP/static/NotoSansJP-Regular.ttf", 52)
 }
 
 local editorState = {
