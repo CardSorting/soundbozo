@@ -2,6 +2,7 @@ return {
     name = "ハンバーグパラダイス!",
     audio = "assets/ハンバーグパラダイス!.mp3",
     difficulty = "Medium",
+    bpm = 120,
     pattern = {
         -- Base cooking rhythm
         {time = 0.5, type = "note", lane = 1},
