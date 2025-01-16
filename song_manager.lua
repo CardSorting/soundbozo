@@ -2,27 +2,22 @@ local storage = require('storage')
 
 local songManager = {}
 local songs = {}
--- Dynamic cache size based on system memory
-local function getMaxCacheSize()
-    local mem = collectgarbage("count") / 1024 -- Get memory usage in MB
-    local totalMem = love.system.getTotalMemory() / (1024 * 1024) -- Total memory in MB
-    
-    -- Calculate cache size based on available memory
-    local baseCache = 5 -- Minimum cache size
-    local maxCache = 10 -- Maximum cache size
-    local availableMem = totalMem - mem
-    
-    -- Scale cache size based on available memory
-    if availableMem > 500 then
-        return maxCache
-    elseif availableMem > 200 then
-        return math.floor(baseCache + (maxCache - baseCache) * ((availableMem - 200) / 300))
-    else
-        return baseCache
-    end
-end
+-- Fixed cache size with memory monitoring
+local MAX_CACHE_SIZE = 8 -- Fixed number of songs to keep loaded
+local memoryWarningThreshold = 500 -- MB
+local memoryCriticalThreshold = 300 -- MB
 
-local MAX_CACHE_SIZE = getMaxCacheSize() -- Dynamic maximum number of songs to keep loaded
+local function checkMemoryUsage()
+    local mem = collectgarbage("count") / 1024 -- Get memory usage in MB
+    if mem > memoryCriticalThreshold then
+        -- Force garbage collection and reduce cache
+        collectgarbage("collect")
+        return math.floor(MAX_CACHE_SIZE * 0.5) -- Reduce cache by half
+    elseif mem > memoryWarningThreshold then
+        return math.floor(MAX_CACHE_SIZE * 0.75) -- Reduce cache by 25%
+    end
+    return MAX_CACHE_SIZE
+end
 local loadedSongs = {} -- Track loaded songs for cache management
 
 function songManager.init()
