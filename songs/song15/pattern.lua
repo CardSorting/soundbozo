@@ -1,0 +1,361 @@
+return {
+    name = "Constructs",
+    audio = "assets/Constructs.mp3",
+    difficulty = "Custom",
+    bpm = 120,
+    arrows = {
+        {time = 0.50, direction = "left"},
+        {time = 1.23, direction = "right"},
+        {time = 2.08, direction = "down"},
+        {time = 2.83, direction = "up"},
+        {time = 3.37, direction = "left"},
+        {time = 4.01, direction = "right"},
+        {time = 4.89, direction = "up"},
+        {time = 5.36, direction = "down"},
+        {time = 5.89, direction = "left"},
+        {time = 6.66, direction = "right"},
+        {time = 7.86, direction = "left"},
+
+        -- 8-16 seconds
+        -- Intense Pattern
+        {time = 8.28, direction = "left"},
+        {time = 8.73, direction = "right"},
+        {time = 9.14, direction = "right"},
+        {time = 9.70, direction = "left"},
+        {time = 10.13, direction = "left"},
+        {time = 10.60, direction = "up"},
+        {time = 11.03, direction = "up"},
+        {time = 11.50, direction = "down"},
+        {time = 11.96, direction = "down"},
+        {time = 12.52, direction = "right"},
+        {time = 12.98, direction = "right"},
+        {time = 13.45, direction = "left"},
+        {time = 13.90, direction = "up"},
+        {time = 14.42, direction = "down"},
+        {time = 14.97, direction = "right"},
+        {time = 15.90, direction = "left"},
+
+        -- 16-24 seconds
+        -- Complex Sequence
+        {time = 16.87, direction = "right"},
+        {time = 17.82, direction = "up"},
+        {time = 18.79, direction = "down"},
+        {time = 19.67, direction = "left"},
+        {time = 20.53, direction = "right"},
+        {time = 21.54, direction = "up"},
+        {time = 22.53, direction = "down"},
+        {time = 23.03, direction = "left"},
+        {time = 23.46, direction = "right"},
+        {time = 23.94, direction = "up"},
+
+        -- 24-32 seconds
+        -- Complex Sequence
+        {time = 24.39, direction = "down"},
+        {time = 24.98, direction = "right"},
+        {time = 25.67, direction = "left"},
+        {time = 26.82, direction = "right"},
+        {time = 27.69, direction = "up"},
+        {time = 28.19, direction = "right"},
+        {time = 28.75, direction = "left"},
+        {time = 29.52, direction = "right"},
+        {time = 30.19, direction = "left"},
+        {time = 30.64, direction = "up"},
+        {time = 31.15, direction = "right"},
+        {time = 31.62, direction = "left"},
+
+        -- 32-40 seconds
+        -- Intense Pattern
+        {time = 32.06, direction = "left"},
+        {time = 32.55, direction = "right"},
+        {time = 33.06, direction = "right"},
+        {time = 33.54, direction = "right"},
+        {time = 33.93, direction = "right"},
+        {time = 34.40, direction = "up"},
+        {time = 34.87, direction = "up"},
+        {time = 35.37, direction = "down"},
+        {time = 35.74, direction = "down"},
+        {time = 36.39, direction = "left"},
+        {time = 37.18, direction = "down"},
+        {time = 38.27, direction = "right"},
+        {time = 38.67, direction = "left"},
+        {time = 39.17, direction = "up"},
+        {time = 39.66, direction = "right"},
+
+        -- 40-48 seconds
+        -- Complex Sequence
+        {time = 40.20, direction = "right"},
+        {time = 41.10, direction = "left"},
+        {time = 42.03, direction = "down"},
+        {time = 43.05, direction = "up"},
+        {time = 43.89, direction = "down"},
+        {time = 44.80, direction = "left"},
+        {time = 45.82, direction = "left"},
+        {time = 46.84, direction = "left"},
+        {time = 47.78, direction = "down"},
+
+        -- 48-56 seconds
+        -- Complex Sequence
+        {time = 48.75, direction = "left"},
+        {time = 49.68, direction = "left"},
+        {time = 50.57, direction = "down"},
+        {time = 51.51, direction = "left"},
+        {time = 52.54, direction = "down"},
+        {time = 53.50, direction = "left"},
+        {time = 53.97, direction = "left"},
+        {time = 54.62, direction = "right"},
+        {time = 55.41, direction = "up"},
+
+        -- 56-64 seconds
+        -- Intense Pattern
+        {time = 56.28, direction = "left"},
+        {time = 56.77, direction = "left"},
+        {time = 57.35, direction = "right"},
+        {time = 57.77, direction = "right"},
+        {time = 58.22, direction = "up"},
+        {time = 58.66, direction = "up"},
+        {time = 59.18, direction = "down"},
+        {time = 59.65, direction = "down"},
+        {time = 60.14, direction = "left"},
+        {time = 60.61, direction = "left"},
+        {time = 61.09, direction = "right"},
+        {time = 61.57, direction = "right"},
+        {time = 62.01, direction = "up"},
+        {time = 62.46, direction = "up"},
+        {time = 62.97, direction = "down"},
+        {time = 63.42, direction = "down"},
+        {time = 63.92, direction = "left"},
+
+        -- 64-72 seconds
+        -- Intense Pattern
+        {time = 64.38, direction = "left"},
+        {time = 64.88, direction = "right"},
+        {time = 65.37, direction = "right"},
+        {time = 65.87, direction = "up"},
+        {time = 66.33, direction = "up"},
+        {time = 66.85, direction = "down"},
+        {time = 67.28, direction = "down"},
+        {time = 67.80, direction = "left"},
+        {time = 68.25, direction = "left"},
+        {time = 68.75, direction = "right"},
+        {time = 69.21, direction = "right"},
+        {time = 69.65, direction = "left"},
+        {time = 70.61, direction = "up"},
+        {time = 71.54, direction = "left"},
+
+        -- 72-80 seconds
+        -- Basic Pattern
+        {time = 72.53, direction = "up"},
+        {time = 73.50, direction = "right"},
+        {time = 74.48, direction = "left"},
+        {time = 75.41, direction = "up"},
+        {time = 76.30, direction = "right"},
+        {time = 77.33, direction = "left"},
+        {time = 78.21, direction = "right"},
+        {time = 79.25, direction = "left"},
+
+        -- 80-88 seconds
+        -- Complex Sequence
+        {time = 80.19, direction = "up"},
+        {time = 81.06, direction = "left"},
+        {time = 82.08, direction = "down"},
+        {time = 83.09, direction = "left"},
+        {time = 83.97, direction = "down"},
+        {time = 84.44, direction = "left"},
+        {time = 84.94, direction = "right"},
+        {time = 85.43, direction = "left"},
+        {time = 85.99, direction = "right"},
+        {time = 86.87, direction = "left"},
+        {time = 87.29, direction = "right"},
+        {time = 87.77, direction = "up"},
+
+        -- 88-96 seconds
+        -- Intense Pattern
+        {time = 88.25, direction = "down"},
+        {time = 88.77, direction = "up"},
+        {time = 89.29, direction = "down"},
+        {time = 89.80, direction = "left"},
+        {time = 90.29, direction = "right"},
+        {time = 90.82, direction = "up"},
+        {time = 91.19, direction = "down"},
+        {time = 91.63, direction = "left"},
+        {time = 92.11, direction = "right"},
+        {time = 92.54, direction = "up"},
+        {time = 93.03, direction = "down"},
+        {time = 93.59, direction = "left"},
+        {time = 94.02, direction = "right"},
+        {time = 94.47, direction = "up"},
+        {time = 94.91, direction = "down"},
+        {time = 95.47, direction = "left"},
+        {time = 95.93, direction = "right"},
+
+        -- 96-104 seconds
+        -- Intense Pattern
+        {time = 96.39, direction = "up"},
+        {time = 96.85, direction = "down"},
+        {time = 97.30, direction = "left"},
+        {time = 97.79, direction = "right"},
+        {time = 98.23, direction = "left"},
+        {time = 98.74, direction = "right"},
+        {time = 99.23, direction = "left"},
+        {time = 99.67, direction = "up"},
+        {time = 100.19, direction = "down"},
+        {time = 100.68, direction = "right"},
+        {time = 101.14, direction = "left"},
+        {time = 101.53, direction = "right"},
+        {time = 102.07, direction = "up"},
+        {time = 102.52, direction = "down"},
+        {time = 102.98, direction = "left"},
+        {time = 103.41, direction = "right"},
+        {time = 103.96, direction = "left"},
+
+        -- 104-112 seconds
+        -- Basic Pattern
+        {time = 104.44, direction = "down"},
+        {time = 105.42, direction = "up"},
+        {time = 106.38, direction = "down"},
+        {time = 107.33, direction = "up"},
+        {time = 108.25, direction = "right"},
+        {time = 109.26, direction = "down"},
+        {time = 110.21, direction = "left"},
+        {time = 111.16, direction = "left"},
+
+        -- 112-120 seconds
+        -- Complex Sequence
+        {time = 112.05, direction = "down"},
+        {time = 113.01, direction = "left"},
+        {time = 114.07, direction = "left"},
+        {time = 114.93, direction = "down"},
+        {time = 115.82, direction = "right"},
+        {time = 116.76, direction = "left"},
+        {time = 117.70, direction = "down"},
+        {time = 118.67, direction = "left"},
+        {time = 119.64, direction = "down"},
+
+        -- 120-128 seconds
+        -- Intense Pattern
+        {time = 120.62, direction = "left"},
+        {time = 121.58, direction = "right"},
+        {time = 121.73, direction = "down"},
+        {time = 122.53, direction = "left"},
+        {time = 123.01, direction = "left"},
+        {time = 123.51, direction = "left"},
+        {time = 123.98, direction = "right"},
+        {time = 124.45, direction = "right"},
+        {time = 124.90, direction = "right"},
+        {time = 125.27, direction = "right"},
+        {time = 125.79, direction = "up"},
+        {time = 126.29, direction = "up"},
+        {time = 126.74, direction = "up"},
+        {time = 127.17, direction = "up"},
+        {time = 127.79, direction = "down"},
+
+        -- 128-136 seconds
+        -- Intense Pattern
+        {time = 128.22, direction = "down"},
+        {time = 128.73, direction = "down"},
+        {time = 129.27, direction = "down"},
+        {time = 129.75, direction = "left"},
+        {time = 130.19, direction = "right"},
+        {time = 130.70, direction = "left"},
+        {time = 131.14, direction = "right"},
+        {time = 131.59, direction = "left"},
+        {time = 132.03, direction = "up"},
+        {time = 132.54, direction = "down"},
+        {time = 133.05, direction = "left"},
+        {time = 133.52, direction = "right"},
+        {time = 134.00, direction = "left"},
+        {time = 134.49, direction = "right"},
+        {time = 134.93, direction = "left"},
+        {time = 135.38, direction = "right"},
+        {time = 135.87, direction = "up"},
+
+        -- 136-144 seconds
+        -- Intense Pattern
+        {time = 136.35, direction = "down"},
+        {time = 136.81, direction = "up"},
+        {time = 137.26, direction = "down"},
+        {time = 137.78, direction = "left"},
+        {time = 138.25, direction = "right"},
+        {time = 138.75, direction = "left"},
+        {time = 139.19, direction = "up"},
+        {time = 139.77, direction = "down"},
+        {time = 140.16, direction = "right"},
+        {time = 140.62, direction = "left"},
+        {time = 141.10, direction = "right"},
+        {time = 141.62, direction = "right"},
+        {time = 142.12, direction = "right"},
+        {time = 142.59, direction = "right"},
+        {time = 143.17, direction = "left"},
+        {time = 143.55, direction = "left"},
+
+        -- 144-152 seconds
+        -- Intense Pattern
+        {time = 144.03, direction = "left"},
+        {time = 144.45, direction = "left"},
+        {time = 144.92, direction = "right"},
+        {time = 145.40, direction = "up"},
+        {time = 145.84, direction = "down"},
+        {time = 146.34, direction = "right"},
+        {time = 146.84, direction = "left"},
+        {time = 147.39, direction = "right"},
+        {time = 147.92, direction = "up"},
+        {time = 148.35, direction = "down"},
+        {time = 148.78, direction = "left"},
+        {time = 149.25, direction = "right"},
+        {time = 149.75, direction = "up"},
+        {time = 150.17, direction = "down"},
+        {time = 150.70, direction = "right"},
+        {time = 151.18, direction = "left"},
+        {time = 151.65, direction = "right"},
+
+        -- 152-160 seconds
+        -- Complex Sequence
+        {time = 152.16, direction = "up"},
+        {time = 152.64, direction = "down"},
+        {time = 153.09, direction = "left"},
+        {time = 153.51, direction = "left"},
+        {time = 154.49, direction = "down"},
+        {time = 155.39, direction = "left"},
+        {time = 156.38, direction = "down"},
+        {time = 157.34, direction = "left"},
+        {time = 158.22, direction = "left"},
+        {time = 159.18, direction = "down"},
+
+        -- 160-168 seconds
+        -- Complex Sequence
+        {time = 160.18, direction = "right"},
+        {time = 161.03, direction = "left"},
+        {time = 161.92, direction = "right"},
+        {time = 163.03, direction = "up"},
+        {time = 164.00, direction = "down"},
+        {time = 164.89, direction = "left"},
+        {time = 165.84, direction = "left"},
+        {time = 166.81, direction = "down"},
+        {time = 167.79, direction = "left"},
+
+        -- 168-176 seconds
+        -- Complex Sequence
+        {time = 168.74, direction = "up"},
+        {time = 169.44, direction = "down"},
+        {time = 169.96, direction = "left"},
+        {time = 170.63, direction = "right"},
+        {time = 171.07, direction = "right"},
+        {time = 171.57, direction = "left"},
+        {time = 172.09, direction = "right"},
+        {time = 172.63, direction = "up"},
+        {time = 172.93, direction = "down"},
+        {time = 173.46, direction = "left"},
+        {time = 174.41, direction = "right"},
+        {time = 175.41, direction = "left"},
+
+        -- 176-184 seconds
+        -- Basic Pattern
+        {time = 176.38, direction = "up"},
+        {time = 177.10, direction = "down"},
+        {time = 178.54, direction = "up"},
+        {time = 179.18, direction = "down"},
+        {time = 180.17, direction = "left"},
+        {time = 180.91, direction = "right"},
+        {time = 181.94, direction = "left"}
+    }
+}
