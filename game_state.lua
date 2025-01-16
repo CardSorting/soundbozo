@@ -10,16 +10,6 @@ local fonts = {
     header = love.graphics.newFont("assets/Noto_Sans_JP/static/NotoSansJP-Regular.ttf", 52)
 }
 
-local editorState = {
-    recording = false,
-    currentTime = 0,
-    arrows = {},
-    songName = nil,
-    audioPath = nil,
-    currentMusic = nil,
-    audioData = nil
-}
-
 local gameState = {
     current = "mainMenu",  -- mainMenu, songSelect, game, gameover, editor
     score = 0,
@@ -44,7 +34,6 @@ local gameState = {
     totalScore = 0,
     isGameOver = false,
     currentMusic = nil,
-    editor = editorState,  -- Initialize editor state properly
     
     -- Enhanced animation states
     menuAnimations = {
@@ -82,7 +71,6 @@ local gameState = {
 
 local menuItems = {
     {text = "Play", action = function() gameState.current = "songSelect" end},
-    {text = "Create Beat Map", action = function() gameState.current = "editor" end},
     {text = "Options", action = function() end},
     {text = "Exit", action = function() love.event.quit() end}
 }
@@ -124,22 +112,11 @@ local hitSettings = {
 }
 
 local function init()
-    -- Reset editor state
-    gameState.editor = {
-        recording = false,
-        currentTime = 0,
-        arrows = {},
-        songName = nil,
-        audioPath = nil,
-        currentMusic = nil,
-        audioData = nil
-    }
 end
 
 -- Create a module table with all components
 local module = {
     state = gameState,
-    editor = gameState.editor,  -- Use the editor state from gameState
     menuItems = menuItems,
     colors = colors,
     hitSettings = hitSettings,

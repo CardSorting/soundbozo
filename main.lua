@@ -3,7 +3,6 @@ local ui = require('ui_config')
 local gameUI = require('game_ui')
 local gameplay = require('gameplay')
 local gameOver = require('game_over')
-local editor = require('editor')
 local storage = require('storage')
 local gameState = require('game_state')
 local songManager = require('song_manager')
@@ -113,8 +112,6 @@ function love.update(dt)
         end
     elseif gameState.state.current == "gameover" then
         gameOver.update(dt)
-    elseif gameState.state.current == "editor" then
-        editor.updateEditor(dt)
     end
 end
 
@@ -167,8 +164,6 @@ function love.draw()
         
         -- Draw the animated game over screen
         gameOver.draw(gameState.state, gameState.colors, gameState.fonts)
-    elseif gameState.state.current == "editor" then
-        editor.drawEditor()
     end
 end
 
@@ -180,16 +175,10 @@ function love.keypressed(key)
             gameState.state.selectedMenuItem = math.min(#gameState.menuItems, gameState.state.selectedMenuItem + 1)
         elseif key == "return" then
             local selectedItem = gameState.menuItems[gameState.state.selectedMenuItem]
-            if selectedItem.text == "Create Beat Map" then
-                menu.cleanup() -- Clean up menu state before entering editor
-                gameState.state.current = "editor"
-                editor.enterEditor()
-            else
-                selectedItem.action()
-                gameState.state.stagesCleared = 0
-                gameState.state.totalScore = 0
-                songManager.cleanup() -- Clean up invalid songs when entering menu
-            end
+            selectedItem.action()
+            gameState.state.stagesCleared = 0
+            gameState.state.totalScore = 0
+            songManager.cleanup() -- Clean up invalid songs when entering menu
         end
     elseif gameState.state.current == "songSelect" then
         local songs = songManager.getSongs()
@@ -296,29 +285,5 @@ function love.keypressed(key)
             gameState.state.current = "songSelect"
         end
         gameOver.reset()
-    elseif gameState.state.current == "editor" then
-        editor.handleEditorKeyPress(key)
-    end
-end
-
-function love.filedropped(file)
-    if gameState.state.current == "editor" then
-        local filename = file:getFilename()
-        if filename:match("%.mp3$") then
-            -- Get the file data
-            file:open("r")
-            local data = file:read("data")  -- Use "data" mode for binary files
-            file:close()
-            
-            -- Update editor state
-            local basename = filename:match("[^/\\]+$")
-            gameState.editor.songName = basename:match("(.+)%.mp3$")
-            gameState.editor.audioData = data
-            
-            -- Try to load the audio file
-            gameState.editor.currentMusic = songManager.loadAudioFromData(data)
-        else
-            print("Invalid file type. Please use MP3 format.")
-        end
     end
 end
