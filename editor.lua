@@ -19,8 +19,14 @@ local function silenceAllMusic()
     if gameState.menuMusic then gameState.menuMusic:stop() end
     if gameState.editor.currentMusic then gameState.editor.currentMusic:stop() end
     if gameState.currentSong and gameState.currentSong.music then gameState.currentSong.music:stop() end
-    for _, song in ipairs(songManager.getSongs()) do
-        if song.music then song.music:stop() end
+    
+    -- Stop any loaded songs
+    local songs = songManager.getSongs()
+    for _, song in ipairs(songs) do
+        local audio = songManager.getSongAudio(song.name)
+        if audio then
+            audio:stop()
+        end
     end
 end
 

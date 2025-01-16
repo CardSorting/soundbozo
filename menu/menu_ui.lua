@@ -112,6 +112,9 @@ function menuUI.drawSongSelect()
     
     -- Update song preview
     local songs = songManager.getSongs()
+    if songs[gameState.state.selectedSong] then
+        songManager.loadSongAudio(songs[gameState.state.selectedSong].name)
+    end
     menuAudio.updatePreview(gameState.state.selectedSong, songs)
     
     -- Draw background and effects
