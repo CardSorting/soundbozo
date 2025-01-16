@@ -10,7 +10,9 @@ function songManager.init()
         require("songs/song2/pattern"),
         require("songs/song3/pattern"),
         require("songs/song4/pattern"),
-        require("songs/song5/pattern")  -- Added song5
+        require("songs/song5/pattern"),
+        require("songs/song6/pattern"),
+        require("songs/song7/pattern")  -- Added
     }
     
     -- Load and validate built-in songs
