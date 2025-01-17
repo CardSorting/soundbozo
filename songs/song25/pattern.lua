@@ -1,6 +1,6 @@
 return {
-    name = "3 AM Shibuya Screams",
-    audio = "assets/3 AM Shibuya Screams.mp3",
+    name = "After Hours Soul",
+    audio = "assets/After Hours Soul.mp3",
     difficulty = "Custom",
     bpm = 120,
     arrows = {
