@@ -25,7 +25,8 @@ function songManager.init()
         require("songs/song17/pattern"),
         require("songs/song18/pattern"),
         require("songs/song19/pattern"),
-        require("songs/song20/pattern")  -- Added
+        require("songs/song20/pattern"),
+        require("songs/song21/pattern")  -- Added
     }
     
     -- Load and validate built-in songs
